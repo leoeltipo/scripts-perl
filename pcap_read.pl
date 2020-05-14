@@ -11,7 +11,7 @@ foreach (@lines)
 {
 	chomp($_);
 	
-	if ($_ =~ m/^\d{4}\s+(([0-9a-zA-Z]{2}\s){1,16})/)
+	if ($_ =~ m/^[0-9a-fA-F]{4}\s+(([0-9a-zA-Z]{2}\s){1,})/)
 	{
 		if (!$frame_started)
 		{
