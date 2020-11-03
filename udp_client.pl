@@ -9,7 +9,7 @@ my ($socket, $data);
 
 # Create UPD Socket and bound to a peer address.
 $socket = new IO::Socket::INET (
-	PeerAddr 	=> '192.168.133.7:2001',
+	PeerAddr 	=> '192.168.133.107:2001',
 	Proto		=> 'udp',
 	) or die "ERROR in Socket Creation : $!\n";
 
@@ -64,12 +64,12 @@ $state_h{11}{msg} = "Data Dynamic MAC Resolution";
 
 &read_state(@addrs);
 
-## Control Destination IP.
+### Control Destination IP.
 #$rw = 1;
 #$nw = 1;
 #$addr_low = 0x3;
 #$addr_high = 1;
-#$ip0 = 102;
+#$ip0 = 100;
 #$ip1 = 133;
 #$ip2 = 168;
 #$ip3 = 192;
@@ -89,7 +89,7 @@ $state_h{11}{msg} = "Data Dynamic MAC Resolution";
 #$port1 = $port/256;
 #$port2 = 0;
 #$port3 = 0;
-#$dummy = 0;
+##$dummy = 0;
 #
 ## Send operation.
 #$data = pack("C2 L2 C4 L",$rw,$nw,$addr_low,$addr_high,$port0,$port1,$port2,$port3,$dummy);
